@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1234",
+    "title": "My First Book",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg/330px-Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg",
+    "price": "16",
+    "description": "This is my first book which gets published. This book is all about the javascript."
+  },
+  {
+    "title": "my second book",
+    "imageUrl": "https://nors.ku.dk/english/research/arnamagnaean/the-book-of-books/AM02-0377_03-opslag_21v-22r-550x300.png",
+    "description": "In this technical tutorial, learn everything you need to know to use Chainlink Price Feeds in your Arbitrum smart contract application. ",
+    "price": "453",
+    "id": "0.033462751479524044"
+  }
+]

@@ -20,6 +20,6 @@ app.use(shopRoutes)
 
 app.use(errorController.get404)
 
-app.listen(3001, () => {
-  console.log(`listening at port 3001`)
+app.listen(8000, () => {
+  console.log(`listening at port 8000`)
 })
