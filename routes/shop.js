@@ -6,6 +6,7 @@ const shopController = require('../controllers/shop')
 
 const router = express.Router()
 
+// http://localhost:3000/
 router.get('/', shopController.getIndex)
 
 router.get('/products', shopController.getProducts)
