@@ -20,6 +20,14 @@ const shopRoutes = require('./routes/shop')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.use((req,res,next)=>{
+  User.findByPk(1)
+  .then(user=>{
+    req.user = user;
+    next();
+  })
+  .catch(err=>console.log(err));
+})
 app.use('/admin', adminRoutes)
 app.use(shopRoutes)
 
@@ -31,8 +39,19 @@ User.hasMany(Product);
 sequelize
   .sync({force:true})
   .then((result) => {
-    console.log(result)
-    app.listen(3000, () =>
+    // console.log(result)
+    return User.findByPk(1);
+    
+  })
+  .then(user=>{
+    if(!user){
+      return User.create({name: "Ranjan", email: "ranjan@solutions.com"})
+    }
+    return Promise.resolve(user)
+  })
+  .then(user=>{
+    console.log(user);
+app.listen(3000, () =>
       console.log('port 3000 is active now: http://localhost:3000/')
     )
   })
